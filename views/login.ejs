@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+</head>
+
+<body>
+  <main>
+    
+    <form method="POST" action="./home_prof">
+      <h1>Professor Login</h1>
+
+      <label><b>Username</b></label>
+      <input name = "profid" require>
+
+      <label><b>Password</b></label>
+      <input name = "profpass" require>
+
+      <input type = "submit" value="Login">
+    </form>
+
+    <h2>--------------------------------------------------------</h2>
+
+    <form method="POST" action="./login">
+      <h1>Student Login</h1>
+
+      <label><b>Last Name</b></label>
+      <input name="userLast" require>
+
+      <label><b>EmpleID</b></label>
+      <input name="userEid" type="password" require>
+
+      <input type = "submit" value="Login">
+    </form>
+
+  </main>
+</body>
+
+</html>

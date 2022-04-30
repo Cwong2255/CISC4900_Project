@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check the register student</title>
+    <script></script>
+</head>
+<body>
+    
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Last Name</th>
+                <th scope="col">First Name</th>
+                <th scope="col">EmplID</th>
+                <th scope="col">Orientation</th>
+                <th scope="col">Intake Survey</th>
+                <th scope="col">Form 1</th>
+                <th scope="col">Attestation</th>
+                <th scope="col">Waiver</th>
+                <th scope="col">Project Proposal</th>
+                <th scope="col">Form 2</th>
+                <th scope="col">Interim Report</th>
+                <th scope="col">Interim Supervisor Evaluation</th>
+                <th scope="col">Final Report</th>
+                <th scope="col">Final Presentation</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <% studentList.forEach(Student=>{     %>
+                <tr>
+                    <td><%= Student.lastName %></td>
+                    <td><%= Student.firstName %></td>
+                    <td><%= Student.ID %></td>
+                    <td><%= Student.Orientation %></td>
+                    <td><%= Student.Intake_Survey %></td>
+                    <td><%= Student.Attestation %></td>
+                    <td><%= Student.Form_1 %></td>
+                    <td><%= Student.Waiver %></td>
+                    <td><%= Student.Project_Proposal %></td>
+                    <td><%= Student.Form_2 %></td>
+                    <td><%= Student.Interim_Report %></td>
+                    <td><%= Student.Interim_Supervisor_Evaluation %></td>
+                    <td><%= Student.Final_Report %></td>
+                    <td><%= Student.Final_Presentation %></td>
+                </tr>
+            <% }) %>
+            
+            
+        </tbody>
+    </table>
+
+
+    <h2>Submit a assignment update right here.</h2>
+    <form method="POST" action="/change">
+        <label>EmpleID:<input name="student_emid" required></label>
+        <br>
+        <label>Assignment:
+            <select name="assign_name">
+                <option value="orientation" >Orientation</option>
+                <option value="intake_survey">Intake Survey</option>
+                <option value="attestation">Attestation</option>
+                <option value="form_1">Form 1</option>
+                <option value="waiver">Waiver</option>
+                <option value="project_proposal">Project Proposal</option>
+                <option value="form_2">Form 2</option>
+                <option value="interim_report">Interim Report</option>
+                <option value="interim_supervisor_evaluation">Interim Supervisor Evaluation</option>
+                <option value="final_report">Final Report</option>
+                <option value="final_presentation">Final Presentation</option>
+            </select></label>
+        <br>
+        <label>Value:<input name="date" required></label>
+        <br>
+        
+        <input type="submit" value="Upadate">
+    </form>
+
+    <a href="home_prof"> Go Back </a>
+
+</body>
+</html>
