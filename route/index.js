@@ -8,19 +8,24 @@ router.get('/',(req, res) => {
   res.render('home')
 })
 
-//direct to "registration.html"
+//direct to "registration.ejs"
 router.get('/registration', (req, res) => {
   res.render('registration')
 })
 
-//direct to "login.html"
+//direct to "login.ejs"
 router.get('/login', (req, res) => {
     res.render('login')
 })
 
-//direct to "home_prof.html"
+//direct to "home_prof.ejs"
 router.get('/home_prof', (req, res) => {
   res.render('home_prof')
+})
+
+//direct to "home.ejs"
+router.get('/home', (req, res) => {
+  res.render('home')
 })
 
 //send request form
@@ -190,14 +195,14 @@ router.post('/change', async (req, res) => {
     res.redirect('submission_check')
   } else if (req.body.assign_name == 'final_report') {
     Student.findOneAndUpdate({ID: req.body.student_emid}, {$set: {
-          Intake_Survey: req.body.date
+          Finla_Report: req.body.date
     }}, { returnOriginal: false }).then((update) => {
       update.save();
     })
     res.redirect('submission_check')
   } else if (req.body.assign_name == 'final_presentation') {
     Student.findOneAndUpdate({ID: req.body.student_emid}, {$set: {
-          Intake_Survey: req.body.date
+          Final_Presentation: req.body.date
     }}, { returnOriginal: false }).then((update) => {
       update.save();
     })

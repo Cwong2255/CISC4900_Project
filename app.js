@@ -25,6 +25,7 @@ db.once("open", dunction => {
     console.log("Connection Succefully!")
 })
 
+
 app.use('/', require('./route/index'));
 app.use('/registration', require('./route/index'));
 app.use('/login', require('./route/index'));
