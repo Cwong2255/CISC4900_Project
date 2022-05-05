@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Check the register student</title>
-    <script></script>
+    <link rel="stylesheet" href="prof.css">
 </head>
 <body>
+
+    <h2>Submit a assignment update right here.</h2>
+    <form method="POST" action="/change">
+        <label>EmpleID:<input name="student_emid" required></label>
+        <br>
+        <label>Assignment:
+            <select name="assign_name">
+                <option value="orientation" >Orientation</option>
+                <option value="intake_survey">Intake Survey</option>
+                <option value="attestation">Attestation</option>
+                <option value="form_1">Form 1</option>
+                <option value="waiver">Waiver</option>
+                <option value="project_proposal">Project Proposal</option>
+                <option value="form_2">Form 2</option>
+                <option value="interim_report">Interim Report</option>
+                <option value="interim_supervisor_evaluation">Interim Supervisor Evaluation</option>
+                <option value="final_report">Final Report</option>
+                <option value="final_presentation">Final Presentation</option>
+            </select></label>
+        <br>
+        <label>Value:<input name="date" required></label>
+        <br>
+        
+        <input type="submit" value="Upadate">
+    </form>
     
     <table>
         <thead>
@@ -50,32 +75,6 @@
             
         </tbody>
     </table>
-
-
-    <h2>Submit a assignment update right here.</h2>
-    <form method="POST" action="/change">
-        <label>EmpleID:<input name="student_emid" required></label>
-        <br>
-        <label>Assignment:
-            <select name="assign_name">
-                <option value="orientation" >Orientation</option>
-                <option value="intake_survey">Intake Survey</option>
-                <option value="attestation">Attestation</option>
-                <option value="form_1">Form 1</option>
-                <option value="waiver">Waiver</option>
-                <option value="project_proposal">Project Proposal</option>
-                <option value="form_2">Form 2</option>
-                <option value="interim_report">Interim Report</option>
-                <option value="interim_supervisor_evaluation">Interim Supervisor Evaluation</option>
-                <option value="final_report">Final Report</option>
-                <option value="final_presentation">Final Presentation</option>
-            </select></label>
-        <br>
-        <label>Value:<input name="date" required></label>
-        <br>
-        
-        <input type="submit" value="Upadate">
-    </form>
 
     <a href="home_prof"> Go Back </a>
 

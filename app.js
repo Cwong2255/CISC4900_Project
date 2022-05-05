@@ -12,6 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //Static folder
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(__dirname));
 
 mongoose.connect(
     `mongodb+srv://cisc4900wpdb:cisc4900wpdb@cisc4900wp.owken.mongodb.net/CISC4900DB?retryWrites=true&w=majority`, {

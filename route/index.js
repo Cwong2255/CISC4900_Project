@@ -28,6 +28,16 @@ router.get('/home', (req, res) => {
   res.render('home')
 })
 
+//direct to "login_prof.ejs"
+router.get('/login_prof', (req, res) => {
+  res.render('login_prof')
+})
+
+//direct to "calendar.ejs"
+router.get('/calendar', (req, res) => {
+  res.render('calendar')
+})
+
 //send request form
 const Request = require ('../model/Student_req')
 
@@ -43,7 +53,7 @@ router.post("/request", (req, res) => {
     });
 
     newReq.save();
-    res.redirect('registration')
+    res.redirect('login')
     
 })
 
@@ -71,6 +81,7 @@ router.get('/reg_prof', (req, res) => {
 
 // add a student
 const Student = require ('../model/Student')
+const Announcement = require('../model/Announcement')
 
 
 router.post("/reg_student", (req, res) => {
@@ -209,6 +220,29 @@ router.post('/change', async (req, res) => {
     res.redirect('submission_check')
   }
 
+})
+
+router.post("/announce", (req, res) => {
+
+  let newAno = new Announce ({
+      Announcement: req.body.announce,
+      Date: Date.now
+  });
+
+  newAno.save();
+  res.redirect('home_prof')
+  
+})
+
+//direct to "home_student.ejs"
+/*const Student = require ('../model/Student')*/
+router.get('/home_student', (req, res) => {
+  //send the form "student" to "home_student.ejs"
+  Student.find({ID: req.body.userEid}, function(err, Student) {
+      res.render('home_student', {
+        studentList: Student
+      })
+  })
 })
 
 module.exports = router

@@ -3,13 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Page to Manage Students</title>
+    <link rel="stylesheet" href="../public/home_prof.css"/>
 </head>
 <body>
-    <a href="reg_prof">Register a student for entering the website.</a>
-    <br>
-    <a href="submission_check">View the assignment submission of each student.</a>
-
-    <a href="home">Sign Out</a>
-    
+    <div id="profb">
+        <button>
+            <a href="reg_prof">Add a Student</a>
+        </button>
+    </div>
+    <div id="profb">
+        <button>
+            <a href="submission_check">Manage Student</a>
+        </button>
+    </div>
+     
+    <br><br>
+    <form method="POST" action="/announce">
+        <textarea name="announce">Post Announcement</textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <br><br>
+    <a id="return" href="home">Sign Out</a>
 </body>
 </html>

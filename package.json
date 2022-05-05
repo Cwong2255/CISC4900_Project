@@ -5,9 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "npx tailwindcss -i ./src/styles.css -o ./public/output.css --watch"
   },
-  "author": "",
+  "author": "Xiaomin Chen, Calvi",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.2",
@@ -15,5 +16,8 @@
     "express": "^4.17.3",
     "mongoose": "^6.2.9",
     "nodemailer": "^6.7.4"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
   }
 }
