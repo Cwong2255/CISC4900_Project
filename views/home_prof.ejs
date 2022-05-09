@@ -8,30 +8,33 @@
 </head>
 <body>
 
-    <a id="return" href="home">Sign Out</a>
+    <a id="return" href="home"><button class="signout"><h4 style="color:white">Sign Out</h3></button></a>
 
-    <div id="profb">
-        <button>
-            <a href="reg_prof">Add a Student</a>
+    <div class="profb">
+        <a href="reg_prof">
+        <button class="addstudent">
+            <h3 style="color: white">Add a Student</h3>
         </button>
-    </div>
-    <div id="profb">
-        <button>
-            <a href="submission_check">Manage Student</a>
+        </a>
+        <a href="submission_check">
+        <button class="managestudent">
+            <h3 style="color: white">Manage Student</h3>
         </button>
+        </a>
+
     </div>
      
     <br><br>
 
-    <h4>Post Announcement:</h4>
-    <form method="POST" action="/announce">
+    <h2 style="color: brown">Post Announcement:</h4>
+    <p style="color: brown">You can post an announcement right here.</p>
+    <form method="POST" action="/announce" class="post">
         <textarea name="announce"></textarea>
-        <button type="submit">Submit</button>
-    </form>
-
-    <h2>Announcements</h2>
+        <button type="submit">Post</button>
+    </form> 
     
-    <table>
+    <table class="show">
+        <h2 style="color: white">Announcements</h2>
         <thead>
             <th scope="col">Date</th>
             <th scope="col">Announcement</th>

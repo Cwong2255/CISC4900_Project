@@ -7,7 +7,6 @@ const CheckSchema = new mongoose.Schema({
     ID: String,
     Orientation: String,
     Intake_Survey: String,
-    Attestation: String,
     Form_1: String,
     Attestation: String,
     Waiver: String,

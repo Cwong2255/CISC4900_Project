@@ -1,4 +1,47 @@
-.profb{
-    display:block;
-    float: left
+html body {
+    background-color: rgb(26, 146, 226);
 }
+
+button.addstudent {
+    display: block;
+    width: 90%;
+    border: none;
+    background-color: #0e3edd;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin:30px;
+    float: left;
+}
+
+button.managestudent {
+    display: block;
+    width: 90%;
+    border: none;
+    background-color: #0a1066;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin:30px;
+}
+
+button.signout {
+    display: block;
+    width: 5%;
+    border: none;
+    background-color: red;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin: 30px;
+}
+
+textarea {
+    width: 90%;
+    height: 200px;
+    margin: 30px;
+}
+
