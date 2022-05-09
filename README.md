@@ -32,7 +32,5 @@ Student can only exist to login after professor add it to the course (in databas
 
 Still in challenging:
 
-Send a single line of info and show it in the student home page like "check list" in our current website, can't find anything online to show how to do, I can only print the whole table on the .ejs, but no idea how to print one row.
-
 A submission link on student home page. I tried to make something like what cuny-blackboard works, but unsure how to do it,  maybe it works for have a large enough database to store the files, but that would so expensive. 
 The thing I am thinking right now is trying to submit the files and make it as an attachment of an auto email that allow to send to professor's mailbox or a default mailbox, this may works, but I still not trying that.
