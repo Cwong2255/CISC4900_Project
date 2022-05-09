@@ -18,11 +18,6 @@ router.get('/login', (req, res) => {
     res.render('login')
 })
 
-//direct to "home_prof.ejs"
-router.get('/home_prof', (req, res) => {
-  res.render('home_prof')
-})
-
 //direct to "home.ejs"
 router.get('/home', (req, res) => {
   res.render('home')
@@ -36,6 +31,11 @@ router.get('/login_prof', (req, res) => {
 //direct to "calendar.ejs"
 router.get('/calendar', (req, res) => {
   res.render('calendar')
+})
+
+//direct to "calendar"
+router.get('/home_student', (req, res) => {
+  res.render('home_student');
 })
 
 //send request form
@@ -57,10 +57,17 @@ router.post("/request", (req, res) => {
     
 })
 
+const Announce = require("../model/Announcement")
+
 //Professor Login
 router.post("/home_prof", (req, res) => {
     if ((req.body.profid == "cisc4900webdesign") && (req.body.profpass == "spring2022term")){
-        res.render("home_prof");
+        //send the form "student" to "submission_check.ejs"
+        Announce.find({}, function(err, Announcement) {
+         res.render('home_prof', {
+            announceList: Announcement
+         })
+      })
     } else {
         res.redirect("login")
     }
@@ -81,8 +88,6 @@ router.get('/reg_prof', (req, res) => {
 
 // add a student
 const Student = require ('../model/Student')
-const Announcement = require('../model/Announcement')
-
 
 router.post("/reg_student", (req, res) => {
 
@@ -121,6 +126,10 @@ router.get('/submission_check', (req, res) => {
   })
 })
 
+const CheckAssign = require('../model/Checklist')
+const { redirect } = require('express/lib/response')
+const { callbackPromise } = require('nodemailer/lib/shared')
+
 //Student Login
 router.post('/login', async (req, res) => {
     Student.findOne({ lastName: req.body.userLast, ID: req.body.userEid }, (err, user) => {
@@ -129,12 +138,19 @@ router.post('/login', async (req, res) => {
         } else if(!user) {
           console.log("User doesn't exit!")
         } else {
+
+          CheckAssign.deleteMany({}, callbackPromise);
+
+          Student.findOne({ ID: req.body.userEid }).then(doc => {
+            CheckAssign.insertMany([doc])
+          })
+
           res.render('home_student', {
             lname: req.body.userLast,
             stuID: req.body.userEid
         })
-        }
-    })     
+      }
+    })    
   });
 
 
@@ -226,7 +242,6 @@ router.post("/announce", (req, res) => {
 
   let newAno = new Announce ({
       Announcement: req.body.announce,
-      Date: Date.now
   });
 
   newAno.save();
@@ -234,15 +249,32 @@ router.post("/announce", (req, res) => {
   
 })
 
-//direct to "home_student.ejs"
-/*const Student = require ('../model/Student')*/
-router.get('/home_student', (req, res) => {
-  //send the form "student" to "home_student.ejs"
-  Student.find({ID: req.body.userEid}, function(err, Student) {
-      res.render('home_student', {
-        studentList: Student
+
+
+router.get('/checklist', (req, res) => {
+  //send the table "checkassign" to "checklist.ejs"
+  CheckAssign.find({}, function(err, Checks) {
+      Announce.find({}, (err, Announcement) => {
+        res.render('checklist', {
+          checkList: Checks,
+          announceList: Announcement
+        })
+      })
+  })
+  
+})
+
+/*const Announce = require("../model/Announcement")*/
+router.get('/home_prof', (req, res) => {
+  //send the form "student" to "submission_check.ejs"
+  Announce.find({}, function(err, Announcement) {
+      res.render('home_prof', {
+        announceList: Announcement
       })
   })
 })
+
+
+
 
 module.exports = router

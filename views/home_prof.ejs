@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Page to Manage Students</title>
-    <link rel="stylesheet" href="../public/home_prof.css"/>
+    <link rel="stylesheet" href="/home_prof.css"/>
+    <link rel="stylesheet" href="table.css"/>
 </head>
 <body>
+
+    <a id="return" href="home">Sign Out</a>
+
     <div id="profb">
         <button>
             <a href="reg_prof">Add a Student</a>
@@ -18,11 +22,29 @@
     </div>
      
     <br><br>
+
+    <h4>Post Announcement:</h4>
     <form method="POST" action="/announce">
-        <textarea name="announce">Post Announcement</textarea>
+        <textarea name="announce"></textarea>
         <button type="submit">Submit</button>
     </form>
-    <br><br>
-    <a id="return" href="home">Sign Out</a>
+
+    <h2>Announcements</h2>
+    
+    <table>
+        <thead>
+            <th scope="col">Date</th>
+            <th scope="col">Announcement</th>
+        </thead>
+        <tbody>
+            <% announceList.forEach(Announcement=>{  %>
+                <tr>
+                    <td><%= Announcement.PostDate %></td>
+                    <td><%= Announcement.Announcement %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    
 </body>
 </html>

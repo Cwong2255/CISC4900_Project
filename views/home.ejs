@@ -9,7 +9,7 @@
       href="https://unpkg.com/flowbite@1.4.1/dist/flowbite.min.css"
     />
 
-    <link rel="stylesheet" href="../mainpage.css" />
+    <link rel="stylesheet" href="output.css" />
     <title>CISC 4900 | Brooklyn College</title>
   </head>
   <body class="bg-white antialiased">
@@ -18,7 +18,7 @@
         <div
           class="container flex flex-wrap items-center justify-between mx-auto"
         >
-          <a href="home" class="flex items-center">
+          <a href="index.html" class="flex items-center">
             <img
               class="mr-2 rounded-full h-9 w-9"
               src="images/133-1337610_brooklyn-college-wikipedia-cuny-brooklyn-college-logo-hd.png"
@@ -31,14 +31,13 @@
             >
           </a>
           <div class="flex md:order-2">
-            <!-- <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Log In</button> -->
             <a
               href="login"
             >
               <span class="relative inline-flex">
                 <button
                   type="button"
-                  class="inline-flex items-center leading-6 transition duration-150 ease-in-out text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-md text-sm px-5 py-2.5 text-center md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  class="inline-flex items-center leading-6 transition duration-150 ease-in-out text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-md text-sm px-5 py-2.5 text-center md:mr-0"
                 >
                   Log In
                 </button>
@@ -55,7 +54,7 @@
             <button
               data-collapse-toggle="mobile-menu-4"
               type="button"
-              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
               aria-controls="mobile-menu-4"
               aria-expanded="false"
             >
@@ -94,8 +93,8 @@
             >
               <li>
                 <a
-                  href="home"
-                  class="block py-2 pl-3 pr-4 text-lg font-light text-white bg-blue-700 rounded md:bg-transparent md:text-blue-400 md:p-0 dark:text-white"
+                  href="index.html"
+                  class="block py-2 pl-3 pr-4 text-lg font-light text-white bg-blue-600 rounded md:bg-transparent md:text-blue-400 md:p-0 dark:text-white"
                   aria-current="page"
                   >Home</a
                 >
@@ -133,11 +132,11 @@
         class="grid items-center h-screen space-x-4 lg:grid-cols-2 justify-center w-full"
       >
         <div class="mx-auto">
-          <h1 class="p-3 pl-2 text-5xl font-medium">CISC 4900/4905</h1>
-          <p class="p-3 text-lg text-gray-600">
+          <h1 class="p-3 pl-2 text-5xl font-medium -mb-3">CISC 4900/4905</h1>
+          <p class="p-3 text-xl text-gray-700">
             Independent and Group Projects
           </p>
-          <p class="p-3 text-gray-700">
+          <p class="p-3 text-gray-600">
             Department of Computer & Information Science, Brooklyn College
           </p>
         </div>
@@ -287,14 +286,269 @@
     </section>
     <!-- Cards Section -->
 
-    <!-- Site Divider -->
+    <!-- Timeline -->
 
-    <!-- <section>
-      <div class="flex justify-center p-10">
-        <h2 class="mb-4 text-2xl font-light text-gray-600">Contact Us</h2>
+    <section class="mb-80 md:mb-3">
+      <div
+        class="grid items-center h-screen space-x-4 md:grid-cols-2 justify-center w-full"
+      >
+        <div class="mx-8 w-1/2 md:mx-auto">
+          <h1 class="p-3 pl-2 text-4xl font-medium">Project Based Course</h1>
+          <p class="p-3 text-lg text-gray-700">
+            This course has one required orientation meeting during the first
+            week, then 15 hours per week required project time.
+          </p>
+        </div>
+
+        <div class="w-10/12">
+          <ol class="relative border-l border-gray-200">
+            <li class="mb-7 ml-6">
+              <span
+                class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white"
+              >
+                <svg
+                  class="w-3 h-3 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <h3
+                class="flex items-center mb-1 text-lg font-semibold text-gray-900"
+              >
+                CISC 4900 Independent and Group Projects I
+                <span
+                  class="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded ml-3"
+                  >Latest</span
+                >
+              </h3>
+              <time
+                class="block mb-2 text-sm font-normal leading-none text-gray-400"
+                >Begins on January 28th, 2022</time
+              >
+              <p class="mb-4 text-base font-normal text-gray-500">
+                Students are responsible for managing their projects and turning
+                in reports by deadlines stated on the course calendar.
+              </p>
+              <a
+                href="https://www.dropbox.com/sh/ywp6tjw15n2c3dk/AAB7fqrb1BkmIhfVlfrVCbhka?dl=0&preview=CISC4900_Syllabus_Spring_2022.pdf"
+                class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-600 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-600"
+                ><svg
+                  class="mr-2 w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                Download Syllabus</a
+              >
+            </li>
+            <li class="mb-7 ml-6">
+              <span
+                class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white"
+              >
+                <svg
+                  class="w-3 h-3 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                CISC 4900 : First Week
+              </h3>
+              <time
+                class="block mb-2 text-sm font-normal leading-none text-gray-400"
+                >Begins on February 4th, 2022</time
+              >
+
+              <div class="flex items-center mb-4 mt-4">
+                <input
+                  id="default-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2"
+                />
+                <label
+                  for="default-checkbox"
+                  class="ml-2 text-sm font-medium text-gray-900"
+                  >Attend onboarding orientation</label
+                >
+              </div>
+              <div class="flex items-center mb-4 mt-4">
+                <input
+                  id="default-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2"
+                />
+                <label
+                  for="default-checkbox"
+                  class="ml-2 text-sm font-medium text-gray-900"
+                  >Submit Form 1</label
+                >
+              </div>
+              <div class="flex items-center mb-4 mt-4">
+                <input
+                  id="default-checkbox"
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 text-blue-600 bg-gray-100 rounded border-gray-300 focus:ring-blue-500 focus:ring-2"
+                />
+                <label
+                  for="default-checkbox"
+                  class="ml-2 text-sm font-medium text-gray-900"
+                  >Work on project proposal</label
+                >
+              </div>
+
+              <!-- <p class="text-base font-normal text-gray-500">
+                Form 1 Due. Solidify project and supervisor.
+              </p> -->
+            </li>
+            <li class="mb-7 ml-6">
+              <span
+                class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white"
+              >
+                <svg
+                  class="w-3 h-3 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                CISC 4900 : Third Week
+              </h3>
+              <time
+                class="block mb-4 text-sm font-normal leading-none text-gray-400"
+                >Begins on February 18th, 2022</time
+              >
+              <a
+                href="https://www.dropbox.com/sh/ywp6tjw15n2c3dk/AAB7fqrb1BkmIhfVlfrVCbhka?dl=0&preview=CISC4900_Syllabus_Spring_2022.pdf"
+                class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-600 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-600"
+                ><svg
+                  class="mr-2 w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                Upload Project Proposal</a
+              >
+              <p class="text-base font-normal text-gray-500 mt-2">
+                Project Proposal Due. Maintain weekly logs. Continue to work on
+                your project and meet with your supervisor.
+              </p>
+            </li>
+            <li class="mb-8 ml-6">
+              <span
+                class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white"
+              >
+                <svg
+                  class="w-3 h-3 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                CISC 4900 : Tenth Week
+              </h3>
+              <time
+                class="block mb-4 text-sm font-normal leading-none text-gray-400"
+                >Begins on April 8th, 2022</time
+              >
+              <a
+                href="https://www.dropbox.com/sh/ywp6tjw15n2c3dk/AAB7fqrb1BkmIhfVlfrVCbhka?dl=0&preview=CISC4900_Syllabus_Spring_2022.pdf"
+                class="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-600 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-600"
+                ><svg
+                  class="mr-2 w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                Upload Interim Report</a
+              >
+              <p class="text-base font-normal text-gray-500 mt-2">
+                Interim Report Due. Maintain weekly logs. Continue to work on
+                your project and meet with supervisor.
+              </p>
+            </li>
+            <li class="mb-7 ml-6">
+              <span
+                class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white"
+              >
+                <svg
+                  class="w-3 h-3 text-blue-600"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </span>
+              <h3 class="mb-1 text-lg font-semibold text-gray-900">
+                CISC 4900 : Fifteenth Week
+              </h3>
+              <time
+                class="block mb-2 text-sm font-normal leading-none text-gray-400"
+                >Begins on May 13th, 2022</time
+              >
+              <p class="text-base font-normal text-gray-500">
+                Final Report and Presentation Due
+              </p>
+            </li>
+          </ol>
+        </div>
       </div>
-    </section> -->
-    <!-- Site Divider -->
+    </section>
+
+    <!-- Timeline -->
 
     <!-- Contact Us -->
 
@@ -308,9 +562,11 @@
               <div>
                 <h1 class="text-4xl font-bold tracking-wide">Contact Us</h1>
                 <p class="pt-2 text-sm text-cyan-100">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Soluta explicabo excepturi laudantium illo rem tempora quia
-                  quam officiis quos
+                  Since its founding in 1930, Brooklyn College has excelled at
+                  providing a high-quality, affordable education to students of
+                  diverse backgrounds, many of them children of immigrants,
+                  working-class New Yorkers, and others seeking access to an
+                  outstanding public institution.
                 </p>
               </div>
               <div class="flex flex-col space-y-6">

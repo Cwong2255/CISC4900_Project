@@ -1,12 +1,13 @@
 const mongoose = require('mongoose')
 
-const StudentSchema = new mongoose.Schema({
+const CheckSchema = new mongoose.Schema({
 
     lastName: String,
     firstName: String,
     ID: String,
     Orientation: String,
     Intake_Survey: String,
+    Attestation: String,
     Form_1: String,
     Attestation: String,
     Waiver: String,
@@ -19,4 +20,4 @@ const StudentSchema = new mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('Students', StudentSchema)
+module.exports = mongoose.model('CheckAssign', CheckSchema)
