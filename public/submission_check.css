@@ -1,0 +1,16 @@
+body {
+    background-color: wheat;
+}
+
+form.manage{
+    display:block;
+    background-color: rgb(224, 187, 116);
+    margin: 30px;
+    width:20%
+}
+
+button.back{
+    background-color: red;
+    margin:30px;
+    width:70px;
+}

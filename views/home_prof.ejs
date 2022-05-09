@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page to Manage Students</title>
+    <link rel="stylesheet" href="/home_prof.css"/>
+    <link rel="stylesheet" href="table.css"/>
+</head>
+<body>
+
+    <a id="return" href="home"><button class="signout"><h4 style="color:white">Sign Out</h3></button></a>
+
+    <div class="profb">
+        <a href="reg_prof">
+        <button class="addstudent">
+            <h3 style="color: white">Add a Student</h3>
+        </button>
+        </a>
+        <a href="submission_check">
+        <button class="managestudent">
+            <h3 style="color: white">Manage Student</h3>
+        </button>
+        </a>
+
+    </div>
+     
+    <br><br>
+
+    <h2 style="color: brown">Post Announcement:</h4>
+    <p style="color: brown">You can post an announcement right here.</p>
+    <form method="POST" action="/announce" class="post">
+        <textarea name="announce"></textarea>
+        <button type="submit">Post</button>
+    </form> 
+    
+    <table class="show">
+        <h2 style="color: white">Announcements</h2>
+        <thead>
+            <th scope="col">Date</th>
+            <th scope="col">Announcement</th>
+        </thead>
+        <tbody>
+            <% announceList.forEach(Announcement=>{  %>
+                <tr>
+                    <td><%= Announcement.PostDate %></td>
+                    <td><%= Announcement.Announcement %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    
+</body>
+</html>
